@@ -16,9 +16,21 @@ import Config
 #       format: "$date $time [$level] $metadata$message\n",
 #       metadata: [:user_id]
 #
+
 config :logger, :console,
   level: :info,
   format: "$date $time [$level] $metadata$message\n"
+
+config :logger, :console,
+  level: :debug,
+  format: "$date $time [$level] $metadata$message\n"
+
+# ---------------------
+# Binance Configuration
+# ----------------------
+config :binance,
+  api_key: "YOUR-API-KEY-HERE",
+  secret_key: "YOUR-SECRET-KEY-HERE"
 
 # Environment config's
 import_config "#{Mix.env()}.exs"
